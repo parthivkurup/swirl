@@ -1,0 +1,18 @@
+[
+  {
+    "headline": "Buy one bowl, second bowl free for mum",
+    "deal_type": "bogo",
+    "discount_value": null,
+    "discount_unit": null,
+    "conditions": "second bowl is for mum and is capped at $12 value",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [],
+    "valid_from": "2026-05-10",
+    "valid_to": "2026-05-10",
+    "recurring": false,
+    "store_hint": null,
+    "confidence": 0.83
+  }
+]

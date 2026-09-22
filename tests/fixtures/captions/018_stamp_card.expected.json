@@ -1,0 +1,18 @@
+[
+  {
+    "headline": "Buy nine cups, get the tenth free",
+    "deal_type": "loyalty",
+    "discount_value": null,
+    "discount_unit": null,
+    "conditions": "stamp card; tenth cup free after nine purchases; ask at register",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [],
+    "valid_from": null,
+    "valid_to": null,
+    "recurring": false,
+    "store_hint": null,
+    "confidence": 0.8
+  }
+]

@@ -1,0 +1,59 @@
+# Per-chain website scrape configuration. Classified 2026-08-05 by probing each
+# promo_url from config/chains.yaml. status is one of:
+#   scrapeable  - promo text is in the page HTML; selectors.text picks the blocks
+#   image_only  - promo is delivered as an image; selectors.image picks it
+#   blocked     - page blocks automated fetch or the domain does not resolve
+#   none        - the chain has no website promo page to scrape
+# Selectors are only defined for scrapeable and image_only entries.
+
+scrapers:
+  - chain: Yo-Chi
+    status: scrapeable
+    url: https://yochi.com.au/chi-club/
+    selectors:
+      text: "section.join-section"
+
+  - chain: Yo-Bar
+    status: scrapeable
+    url: https://yobar.com.au/news
+    selectors:
+      text: ".standard-blog-content"
+
+  - chain: YOMG
+    status: image_only
+    url: https://www.yomg.com.au/offers/
+    selectors:
+      image: "img.attachment-full"
+
+  - chain: Just Crave It
+    status: blocked
+    url: https://justcraveit.com.au/about/
+    # Domain did not resolve on probe and the chain notes report it blocks
+    # automated fetch. Left for manual/search-snippet capture.
+
+  - chain: Yo Way
+    status: none          # website has no offers or loyalty page
+  - chain: Yo-Art
+    status: none          # no promo_url; Instagram only
+  - chain: Yokli
+    status: none          # no website
+  - chain: Yolux
+    status: none          # no website
+  - chain: gojé
+    status: none          # website, but no promo page
+  - chain: Froyolicious
+    status: none          # Instagram only, promos posted there
+  - chain: FRO-BAE Frozen Yoghurt & Acai
+    status: none          # no website
+  - chain: YO MAMA Froyo & Acai
+    status: none          # no website; TikTok/Instagram
+  - chain: Froyo Culture
+    status: none          # no website; Facebook only
+  - chain: YO-TO Frozen Bar
+    status: none          # no website; Instagram/TikTok, both block fetch
+  - chain: blu spoon
+    status: none          # website, but no promo page
+  - chain: Big Bang Yogurt
+    status: none          # Square storefront, no promo page
+  - chain: Vanilla Dessert Bar
+    status: none          # no website or confirmed handle

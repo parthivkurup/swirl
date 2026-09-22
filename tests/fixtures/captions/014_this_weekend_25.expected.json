@@ -1,0 +1,21 @@
+[
+  {
+    "headline": "25% off everything for the weekend",
+    "deal_type": "percent_off",
+    "discount_value": 25,
+    "discount_unit": "percent",
+    "conditions": null,
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [
+      6,
+      7
+    ],
+    "valid_from": "2026-10-17",
+    "valid_to": "2026-10-18",
+    "recurring": false,
+    "store_hint": null,
+    "confidence": 0.8
+  }
+]

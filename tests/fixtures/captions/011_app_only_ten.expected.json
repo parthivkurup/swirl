@@ -1,0 +1,20 @@
+[
+  {
+    "headline": "$10 large cups on app orders",
+    "deal_type": "fixed_price",
+    "discount_value": 10,
+    "discount_unit": "aud",
+    "conditions": "app orders only, not available at the counter",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [
+      "app"
+    ],
+    "days_of_week": [],
+    "valid_from": null,
+    "valid_to": null,
+    "recurring": false,
+    "store_hint": null,
+    "confidence": 0.8
+  }
+]

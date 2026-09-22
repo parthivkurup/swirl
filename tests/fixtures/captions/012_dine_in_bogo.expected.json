@@ -1,0 +1,20 @@
+[
+  {
+    "headline": "Two for one bowls, dine in only",
+    "deal_type": "bogo",
+    "discount_value": null,
+    "discount_unit": null,
+    "conditions": "dine in only, no takeaway cups; from 5pm until close",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [
+      "dine_in"
+    ],
+    "days_of_week": [],
+    "valid_from": "2026-02-19",
+    "valid_to": "2026-02-19",
+    "recurring": false,
+    "store_hint": null,
+    "confidence": 0.76
+  }
+]

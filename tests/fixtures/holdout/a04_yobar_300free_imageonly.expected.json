@@ -1,0 +1,20 @@
+[
+  {
+    "headline": "300 free bowls at the Canberra grand opening",
+    "deal_type": "freebie",
+    "discount_value": null,
+    "discount_unit": null,
+    "unit_basis": null,
+    "category": "froyo",
+    "conditions": "first 300 bowls free at the Canberra grand opening",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [],
+    "valid_from": null,
+    "valid_to": null,
+    "recurring": false,
+    "store_hint": "Canberra",
+    "confidence": 0.85
+  }
+]

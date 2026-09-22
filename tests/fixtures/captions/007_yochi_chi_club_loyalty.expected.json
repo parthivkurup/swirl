@@ -1,0 +1,20 @@
+[
+  {
+    "headline": "Chi Club: one point per $10 spent plus a birthday treat",
+    "deal_type": "loyalty",
+    "discount_value": null,
+    "discount_unit": null,
+    "conditions": "earn one point per $10 spent; free treat on birthday; join via app",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [
+      "app"
+    ],
+    "days_of_week": [],
+    "valid_from": null,
+    "valid_to": null,
+    "recurring": false,
+    "store_hint": null,
+    "confidence": 0.75
+  }
+]

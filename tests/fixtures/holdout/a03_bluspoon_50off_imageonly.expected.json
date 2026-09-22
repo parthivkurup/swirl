@@ -1,0 +1,22 @@
+[
+  {
+    "headline": "Monday Mania 50% off",
+    "deal_type": "percent_off",
+    "discount_value": 50,
+    "discount_unit": "percent",
+    "unit_basis": null,
+    "category": "froyo",
+    "conditions": "Monday Mania promotion",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [
+      1
+    ],
+    "valid_from": null,
+    "valid_to": null,
+    "recurring": true,
+    "store_hint": null,
+    "confidence": 0.7
+  }
+]

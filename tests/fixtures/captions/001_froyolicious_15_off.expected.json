@@ -1,0 +1,18 @@
+[
+  {
+    "headline": "15% off a froyo bowl for showing this post",
+    "deal_type": "percent_off",
+    "discount_value": 15,
+    "discount_unit": "percent",
+    "conditions": "show this post at the counter in store",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [],
+    "valid_from": null,
+    "valid_to": null,
+    "recurring": false,
+    "store_hint": null,
+    "confidence": 0.72
+  }
+]

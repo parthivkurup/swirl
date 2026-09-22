@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Scrape (website morning-only + Instagram) then extract, at 08:30 and 18:30.
+     A LaunchAgent (user GUI session) rather than a daemon, because ingestion may
+     need one. Set the absolute paths to your own checkout. See docs/SETUP.md
+     ("Scheduling on macOS") for load/unload/trigger. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.froyo.scrape</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/ABSOLUTE/PATH/TO/froyo/ops/froyo-scrape.sh</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/ABSOLUTE/PATH/TO/froyo</string>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict>
+      <key>Hour</key><integer>8</integer>
+      <key>Minute</key><integer>30</integer>
+    </dict>
+    <dict>
+      <key>Hour</key><integer>18</integer>
+      <key>Minute</key><integer>30</integer>
+    </dict>
+  </array>
+  <key>StandardOutPath</key>
+  <string>/ABSOLUTE/PATH/TO/froyo/logs/scrape.log</string>
+  <key>StandardErrorPath</key>
+  <string>/ABSOLUTE/PATH/TO/froyo/logs/scrape.log</string>
+</dict>
+</plist>

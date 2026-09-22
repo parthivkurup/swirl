@@ -1,0 +1,417 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-09T00:00:00Z",
+  "title": "Design System: Melbourne Froyo",
+  "extensions": {
+    "scope": "Documents the public dashboard at / only. /review, /submit and /login are unstyled Tailwind defaults, deliberately excluded from this work, and are undocumented and out of scope.",
+    "colorMeta": {
+      "ink-bg": {
+        "role": "neutral",
+        "displayName": "Ground",
+        "canonical": "oklch(13.4% 0.002 286)",
+        "tonalRamp": [
+          "oklch(15% 0.002 286)",
+          "oklch(26% 0.002 286)",
+          "oklch(37% 0.002 286)",
+          "oklch(48% 0.002 286)",
+          "oklch(59% 0.002 286)",
+          "oklch(70% 0.002 286)",
+          "oklch(81% 0.002 286)",
+          "oklch(92% 0.002 286)"
+        ]
+      },
+      "ink-hi": {
+        "role": "neutral",
+        "displayName": "Subject Ink",
+        "canonical": "oklch(95.5% 0.001 286)",
+        "contrastOnGround": "17.69:1",
+        "tonalRamp": [
+          "oklch(15% 0.001 286)",
+          "oklch(26% 0.001 286)",
+          "oklch(37% 0.001 286)",
+          "oklch(48% 0.001 286)",
+          "oklch(59% 0.001 286)",
+          "oklch(70% 0.001 286)",
+          "oklch(81% 0.001 286)",
+          "oklch(92% 0.001 286)"
+        ]
+      },
+      "ink-mid": {
+        "role": "neutral",
+        "displayName": "Meaning Ink",
+        "canonical": "oklch(70.3% 0.006 286)",
+        "contrastOnGround": "7.71:1",
+        "tonalRamp": [
+          "oklch(15% 0.006 286)",
+          "oklch(26% 0.006 286)",
+          "oklch(37% 0.006 286)",
+          "oklch(48% 0.006 286)",
+          "oklch(59% 0.006 286)",
+          "oklch(70% 0.006 286)",
+          "oklch(81% 0.006 286)",
+          "oklch(92% 0.006 286)"
+        ]
+      },
+      "ink-low": {
+        "role": "neutral",
+        "displayName": "Supporting Ink",
+        "canonical": "oklch(60.3% 0.010 286)",
+        "contrastOnGround": "5.41:1",
+        "tonalRamp": [
+          "oklch(15% 0.010 286)",
+          "oklch(26% 0.010 286)",
+          "oklch(37% 0.010 286)",
+          "oklch(48% 0.010 286)",
+          "oklch(59% 0.010 286)",
+          "oklch(70% 0.010 286)",
+          "oklch(81% 0.010 286)",
+          "oklch(92% 0.010 286)"
+        ]
+      },
+      "ink-line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(24.6% 0.005 286)",
+        "tonalRamp": [
+          "oklch(15% 0.005 286)",
+          "oklch(26% 0.005 286)",
+          "oklch(37% 0.005 286)",
+          "oklch(48% 0.005 286)",
+          "oklch(59% 0.005 286)",
+          "oklch(70% 0.005 286)",
+          "oklch(81% 0.005 286)",
+          "oklch(92% 0.005 286)"
+        ]
+      },
+      "ink-lineStrong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "canonical": "oklch(30.6% 0.008 286)",
+        "tonalRamp": [
+          "oklch(15% 0.008 286)",
+          "oklch(26% 0.008 286)",
+          "oklch(37% 0.008 286)",
+          "oklch(48% 0.008 286)",
+          "oklch(59% 0.008 286)",
+          "oklch(70% 0.008 286)",
+          "oklch(81% 0.008 286)",
+          "oklch(92% 0.008 286)"
+        ]
+      },
+      "live": {
+        "role": "primary",
+        "displayName": "Live Mint",
+        "canonical": "oklch(80.5% 0.132 165.6)",
+        "contrastOnGround": "11.02:1",
+        "meaning": "Availability today; as the focus ring, \"you are here\". Never value, urgency, or branding.",
+        "tonalRamp": [
+          "oklch(15% 0.132 165.6)",
+          "oklch(26% 0.132 165.6)",
+          "oklch(37% 0.132 165.6)",
+          "oklch(48% 0.132 165.6)",
+          "oklch(59% 0.132 165.6)",
+          "oklch(70% 0.132 165.6)",
+          "oklch(81% 0.132 165.6)",
+          "oklch(92% 0.132 165.6)"
+        ]
+      },
+      "surface-raised": {
+        "role": "neutral",
+        "displayName": "Raised Wash",
+        "canonical": "rgba(255,255,255,0.07)",
+        "note": "A selected state on the toggle, not a surface family. Used exactly once.",
+        "tonalRamp": [
+          "rgba(255,255,255,0.02)",
+          "rgba(255,255,255,0.04)",
+          "rgba(255,255,255,0.07)",
+          "rgba(255,255,255,0.10)",
+          "rgba(255,255,255,0.14)",
+          "rgba(255,255,255,0.20)",
+          "rgba(255,255,255,0.30)",
+          "rgba(255,255,255,0.45)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The wordmark line, once per page."
+      },
+      "headline": {
+        "displayName": "Offer Value",
+        "purpose": "The offer itself. Every deal type renders here at identical size and weight; the page never ranks deal types typographically."
+      },
+      "title": {
+        "displayName": "Location",
+        "purpose": "\"All <chain> locations\", with the chain name lifted to ink-hi inside it."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "The deal's own wording, conditions, status, provenance dates, band notes, footer. Line-height 1.625 for multi-line prose, 1.4 for the right-hand status and checked date. A 500-weight variant carries the unit basis."
+      },
+      "label": {
+        "displayName": "Band Label",
+        "purpose": "Sticky band heads and their counts."
+      },
+      "tag": {
+        "displayName": "Off-Category Tag",
+        "purpose": "\"adjacent dessert\" / \"not froyo\", bare text inline beside the offer value. No pill, no background."
+      }
+    },
+    "shadows": [],
+    "elevationPhilosophy": "Flat. No box-shadows, cards, panels, gradients, or backdrop blur anywhere. Depth is ink contrast plus 1px hairlines. The reader perceives a hierarchy of importance, not a stack of surfaces.",
+    "motion": [
+      {
+        "name": "state-color",
+        "value": "transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "The only motion in the system: colour feedback on hover and selection."
+      },
+      {
+        "name": "entrance-none",
+        "value": "none",
+        "purpose": "Deliberate absence. No entrance animation, stagger, skeleton shimmer, or scroll reveal. Content that fades in is content that is not yet readable, on a page whose thesis is legibility in a glance. Recorded as an open disagreement with the usual one-authored-moment expectation, not an oversight."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px",
+        "purpose": "Gutters 20px to 28px, top padding 32px to 48px. The 600px column itself does not widen, and rows have no fixed-width column at any size."
+      }
+    ],
+    "focusRing": {
+      "value": "outline: none; box-shadow: 0 0 0 2px #0A0A0B, 0 0 0 4px rgba(67, 217, 163, 0.7);",
+      "trigger": ":focus-visible",
+      "purpose": "System-wide. The accent's second and only other job."
+    }
+  },
+  "components": [
+    {
+      "name": "Deal Row",
+      "kind": "custom",
+      "refersTo": "deal-row",
+      "description": "The signature component: offer and its wording on the left, provenance on a fixed right column, hairline below.",
+      "html": "<ul class=\"ds-deal-list\"><li class=\"ds-deal-row\"><div class=\"ds-deal-main\"><p class=\"ds-deal-offer-line\"><span class=\"ds-deal-offer\">$4.99</span><span class=\"ds-deal-basis\">/ 100g</span></p><p class=\"ds-deal-location\">All <span class=\"ds-deal-chain\">Just Crave It</span> locations</p><p class=\"ds-deal-headline\">$4.99 unlimited froyo and toppings cup</p><p class=\"ds-deal-meta\">Mon, Tue &middot; recurring &middot; in store</p></div><div class=\"ds-deal-aside\"><p class=\"ds-deal-status\">ends 14 Aug</p><p class=\"ds-deal-checked\">checked 7 Aug</p></div></li></ul>",
+      "css": ".ds-deal-list { list-style: none; margin: 0; padding: 0; font-family: 'Geist Sans', ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; background: #0A0A0B; } .ds-deal-row { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px solid #212125; } .ds-deal-list .ds-deal-row:last-child { border-bottom: 0; } .ds-deal-main { min-width: 0; flex: 1 1 0%; } .ds-deal-main p { margin: 0; } .ds-deal-offer-line { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 8px; } .ds-deal-offer { font-size: 18px; font-weight: 600; letter-spacing: -0.015em; font-variant-numeric: tabular-nums; color: #F2F2F3; } .ds-deal-basis { font-size: 12.5px; font-weight: 500; color: #85858E; } .ds-deal-location { margin-top: 2px !important; font-size: 14px; color: #85858E; } .ds-deal-chain { color: #F2F2F3; } .ds-deal-headline { margin-top: 6px !important; font-size: 12.5px; line-height: 1.5; color: #A1A1A8; } .ds-deal-meta { margin-top: 4px !important; font-size: 12.5px; font-variant-numeric: tabular-nums; color: #85858E; } .ds-deal-aside { width: 8rem; flex-shrink: 0; padding-top: 3px; text-align: right; } .ds-deal-aside p { margin: 0; font-size: 12.5px; line-height: 1.4; font-variant-numeric: tabular-nums; } .ds-deal-status { color: #A1A1A8; } .ds-deal-checked { margin-top: 2px !important; color: #85858E; }"
+    },
+    {
+      "name": "Deal Row (stale or ended)",
+      "kind": "custom",
+      "refersTo": "deal-row-offer-dimmed",
+      "description": "The dimmed variant: every ink role demotes one step and the date stays visible. Never hidden, never collapsed.",
+      "html": "<ul class=\"ds-deal-list ds-deal-list--dim\"><li class=\"ds-deal-row\"><div class=\"ds-deal-main\"><p class=\"ds-deal-offer-line\"><span class=\"ds-deal-offer\">Free</span></p><p class=\"ds-deal-location\">All <span class=\"ds-deal-chain\">Yo-Bar</span> locations</p><p class=\"ds-deal-headline\">Free bowl for first 300 loyalty members</p></div><div class=\"ds-deal-aside\"><p class=\"ds-deal-status\">ended 8 Aug</p><p class=\"ds-deal-checked\">checked 9 Aug</p></div></li></ul>",
+      "css": ".ds-deal-list--dim { list-style: none; margin: 0; padding: 0; font-family: 'Geist Sans', ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; background: #0A0A0B; } .ds-deal-list--dim .ds-deal-offer { color: #A1A1A8; } .ds-deal-list--dim .ds-deal-chain { color: #A1A1A8; } .ds-deal-list--dim .ds-deal-headline { color: #85858E; } .ds-deal-list--dim .ds-deal-status { color: #85858E; }"
+    },
+    {
+      "name": "Band Head",
+      "kind": "nav",
+      "refersTo": "band-head",
+      "description": "Sticky, opaque, gutter-bleeding group head. The live dot appears only on bands that are available today.",
+      "html": "<div class=\"ds-band-head\"><span class=\"ds-band-dot\" aria-hidden=\"true\"></span><h2 class=\"ds-band-title\">Available today, ending soon</h2><span class=\"ds-band-count\">3</span></div>",
+      "css": ".ds-band-head { position: sticky; top: 0; z-index: 10; display: flex; align-items: baseline; gap: 8px; background: #0A0A0B; padding: 12px 20px 8px; margin: 0 -20px; font-family: 'Geist Sans', ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; } .ds-band-dot { height: 6px; width: 6px; border-radius: 9999px; background: #43D9A3; flex-shrink: 0; } .ds-band-title { margin: 0; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.09em; color: #A1A1A8; } .ds-band-count { font-size: 11px; font-variant-numeric: tabular-nums; color: #85858E; }"
+    },
+    {
+      "name": "Band Note",
+      "kind": "custom",
+      "refersTo": "deal-row-meta",
+      "description": "Plain-words explanation under bands 2 through 4, saying what the band means rather than making the reader infer it.",
+      "html": "<p class=\"ds-band-note\">Still listed, but nobody has confirmed these lately. Treat them as unconfirmed.</p>",
+      "css": ".ds-band-note { margin: 4px 0; font-family: 'Geist Sans', ui-sans-serif, system-ui, sans-serif; font-size: 12.5px; line-height: 1.625; color: #85858E; }"
+    },
+    {
+      "name": "Category Toggle",
+      "kind": "nav",
+      "refersTo": "toggle-on",
+      "description": "Two anchors, not buttons: the category lives in the URL, so the control stays shareable and back-button-correct.",
+      "html": "<div class=\"ds-toggle\"><a href=\"/\" class=\"ds-toggle-item ds-toggle-item--on\">Froyo</a><a href=\"/?category=all\" class=\"ds-toggle-item\">Everything</a></div>",
+      "css": ".ds-toggle { display: flex; align-items: center; gap: 4px; font-family: 'Geist Sans', ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; } .ds-toggle-item { border-radius: 6px; padding: 4px 10px; font-size: 12.5px; text-decoration: none; color: #85858E; transition: color 150ms cubic-bezier(0.4,0,0.2,1), background-color 150ms cubic-bezier(0.4,0,0.2,1); } .ds-toggle-item:hover { color: #A1A1A8; } .ds-toggle-item--on { background: rgba(255,255,255,0.07); font-weight: 500; color: #F2F2F3; } .ds-toggle-item--on:hover { color: #F2F2F3; } .ds-toggle-item:focus-visible { outline: none; box-shadow: 0 0 0 2px #0A0A0B, 0 0 0 4px rgba(67,217,163,0.7); }"
+    },
+    {
+      "name": "Quiet Link",
+      "kind": "button",
+      "refersTo": "link-quiet",
+      "description": "The only outbound action on the page, deliberately not a button. An available exit, never a call to action.",
+      "html": "<a href=\"/submit\" class=\"ds-link-quiet\">Seen one? Send it in</a>",
+      "css": ".ds-link-quiet { font-family: 'Geist Sans', ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; display: inline-block; border-radius: 6px; padding: 0 4px; font-size: 12.5px; color: #85858E; text-decoration: underline; text-decoration-color: #2E2E34; text-underline-offset: 4px; transition: color 150ms cubic-bezier(0.4,0,0.2,1); } .ds-link-quiet:hover { color: #A1A1A8; } .ds-link-quiet:focus-visible { outline: none; box-shadow: 0 0 0 2px #0A0A0B, 0 0 0 4px rgba(67,217,163,0.7); }"
+    },
+    {
+      "name": "Off-Category Tag",
+      "kind": "chip",
+      "refersTo": "off-category-tag",
+      "description": "Marks a deal that is not froyo. Bare uppercase text inline beside the offer value: no pill, no background, no border.",
+      "html": "<p class=\"ds-offer-line\"><span class=\"ds-offer\">20% off</span><span class=\"ds-tag\">adjacent dessert</span></p>",
+      "css": ".ds-offer-line { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 8px; font-family: 'Geist Sans', ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; } .ds-offer { font-size: 18px; font-weight: 600; letter-spacing: -0.015em; font-variant-numeric: tabular-nums; color: #F2F2F3; } .ds-tag { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: #A1A1A8; }"
+    },
+    {
+      "name": "Field Label",
+      "kind": "form",
+      "refersTo": "web/app/submit/SubmitForm.tsx",
+      "description": "14px ink-hi label with optional marker in ink-low, plus a 12.5px ink-low hint line beneath carrying the example or constraint. Examples never go in a placeholder.",
+      "html": "<label class=\"ds-field-label\" for=\"store\">Which shop <span class=\"ds-optional\">(optional)</span></label>\n<p class=\"ds-field-hint\" id=\"store-hint\">For example, Yo-Chi Glen Waverley</p>",
+      "css": ".ds-field-label{font:400 14px/1.4 'Geist Sans',ui-sans-serif,system-ui,sans-serif;color:#F2F2F3;display:block}\n.ds-optional{color:#85858E}\n.ds-field-hint{margin-top:2px;font-size:12.5px;color:#85858E}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "form",
+      "refersTo": "web/app/submit/SubmitForm.tsx",
+      "description": "Transparent field with a 1px ink-line border and 6px radius. Text is 18px, never 14px: iOS Safari zooms on focus below 16px. Hover lifts the border to ink-lineStrong; focus takes the system ring.",
+      "html": "<input class=\"ds-field\" id=\"store\" name=\"store\" aria-describedby=\"store-hint\">",
+      "css": ".ds-field{width:100%;border:1px solid #212125;border-radius:6px;background:transparent;padding:10px 12px;font:400 18px/1.4 'Geist Sans',ui-sans-serif,system-ui,sans-serif;color:#F2F2F3;transition:border-color .15s}\n.ds-field:hover{border-color:#2E2E34}\n.ds-field:focus-visible{outline:none;box-shadow:0 0 0 2px #0A0A0B,0 0 0 4px rgba(67,217,163,.7)}"
+    },
+    {
+      "name": "Photo Picker",
+      "kind": "form",
+      "refersTo": "web/app/submit/SubmitForm.tsx",
+      "description": "sr-only file input plus a styled label box carrying the focus ring via peer-focus-visible. Empty: prompt over accepted formats and size cap. Filled: truncated file name over size and 'tap to replace', with a 48px thumbnail of the local file. No required attribute, because a native bubble would anchor to the 1px hidden input.",
+      "html": "<label class=\"ds-picker\" for=\"photo\"><input id=\"photo\" type=\"file\" class=\"ds-picker-input\"><span class=\"ds-picker-box\"><span><span class=\"ds-picker-title\">Take or choose a photo</span><span class=\"ds-picker-hint\">jpg, png or heic &middot; up to 10MB</span></span></span></label>",
+      "css": ".ds-picker-input{position:absolute;width:1px;height:1px;clip:rect(0 0 0 0);overflow:hidden}\n.ds-picker-box{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid #212125;border-radius:6px;padding:12px}\n.ds-picker-box:hover{border-color:#2E2E34}\n.ds-picker-input:focus-visible + .ds-picker-box{outline:none;box-shadow:0 0 0 2px #0A0A0B,0 0 0 4px rgba(67,217,163,.7)}\n.ds-picker-title{display:block;font-size:14px;color:#F2F2F3}\n.ds-picker-hint{display:block;margin-top:2px;font-size:12.5px;color:#85858E}"
+    },
+    {
+      "name": "Primary Action",
+      "kind": "form",
+      "refersTo": "web/app/submit/SubmitForm.tsx",
+      "description": "The system's only button, and an inversion of the ground rather than a coloured button: the accent is not available for calls to action. Disabled and busy fall back to surface-raised with ink-low text.",
+      "html": "<button class=\"ds-action\" type=\"submit\">Send it in</button>",
+      "css": ".ds-action{width:100%;border:0;border-radius:6px;background:#F2F2F3;color:#0A0A0B;padding:12px 16px;font:500 14px/1.4 'Geist Sans',ui-sans-serif,system-ui,sans-serif;transition:background-color .15s}\n.ds-action:hover{background:#fff}\n.ds-action:disabled{background:rgba(255,255,255,.07);color:#85858E}\n.ds-action:focus-visible{outline:none;box-shadow:0 0 0 2px #0A0A0B,0 0 0 4px rgba(67,217,163,.7)}"
+    },
+    {
+      "name": "Error Line",
+      "kind": "feedback",
+      "refersTo": "web/app/submit/SubmitForm.tsx",
+      "description": "12.5px ink-hi with role=alert, directly above the primary action. Errors carry no colour: promoting a line to ink-hi on a page of ink-mid and ink-low already makes it the brightest element, and the words name the problem and the recovery. A red token was considered and deliberately not added.",
+      "html": "<p class=\"ds-error\" role=\"alert\">Add a photo first.</p>",
+      "css": ".ds-error{font-size:12.5px;line-height:1.625;color:#F2F2F3}"
+    },
+    {
+      "name": "Received State",
+      "kind": "feedback",
+      "refersTo": "web/app/submit/SubmitForm.tsx",
+      "description": "Replaces the form in place. 18px heading, 12.5px ink-mid explanation, one quiet action. Never reports an extraction result, a timeframe or an outcome.",
+      "html": "<section><h2 class=\"ds-received\">Received.</h2><p class=\"ds-received-body\">It is in the queue to be read by a person. There is no notification and no way to follow it up, because nothing here identifies you.</p></section>",
+      "css": ".ds-received{font:600 18px/1.3 'Geist Sans',ui-sans-serif,system-ui,sans-serif;letter-spacing:-.015em;color:#F2F2F3}\n.ds-received-body{margin-top:6px;font-size:12.5px;line-height:1.625;color:#A1A1A8}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Record, Not the Pitch",
+    "overview": "The page is read at arm's length, on a phone, in the evening, by someone deciding within seconds which Melbourne froyo chain is worth walking to. Everything follows from that: one ranked column on a near-black ground, band heads that say what state a deal is in, offers written at equal typographic weight because there is no honest exchange rate between \"50% off\" and \"$3 / 100g\", and a date on every row saying when a human last confirmed it. Nothing sells. The surface's only job is to be true and instantly legible.\n\nThe visual world is convention executed at the craft level of Linear, Vercel and Raycast. This is a commitment, not a fallback. The owner was dealt three authored directions (The A-Frame, The Panel, Unit Price), re-rolled all three, and took the standing exit to convention: no metaphor, no borrowed world, no clever naming, no smuggled quirk. PRODUCT.md records it as a standing preference under Brand Commitments. A future run that \"improves\" this surface with a concept is re-proposing something already declined three times.\n\nMotion is interaction feedback only. There is deliberately no entrance animation, and the reasoning is recorded in web/app/globals.css: content that fades in is content that is not yet readable, on a page whose entire thesis is legibility in a glance. This departs from the usual expectation of one authored motion moment per surface. It is an open disagreement held on purpose, not an oversight; if a future run wants an entrance moment it has to argue against the thesis, not just add a keyframe.",
+    "keyCharacteristics": [
+      "Near-black ground (ink-bg), never pure black, never a lighter card surface behind rows",
+      "Exactly three ink tones for text, each with a fixed job",
+      "Exactly one accent, meaning \"available today\" and, as the focus ring, \"you are here\"",
+      "Five hard type steps: 22 / 18 / 14 / 12.5 / 11",
+      "Hairline dividers instead of shadows, cards, or panels",
+      "Absence and staleness are printed, never hidden",
+      "No imagery, no icons, no badges, no filter bar, no hero"
+    ],
+    "rules": [
+      {
+        "name": "The Live-Only Rule",
+        "body": "#43D9A3 may appear in exactly two places on any surface: as the availability dot on a band that is live today, and as the focus ring. It never carries value, urgency, savings, a call to action, or brand identity. If a new element \"wants\" the accent, that element wants hierarchy it has not earned.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Inks Rule",
+        "body": "Ink is assigned by role, not by taste. ink-hi = the subject (offer value, chain name). ink-mid = the deal's own words and any date that is real. ink-low = supporting detail, absent facts, and dimmed states. These roles were corrected during review; getting them wrong is the fastest way to make the page lie about what matters.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dim, Never Hide Rule",
+        "body": "A stale (unverified for 14+ days) or ended deal demotes one ink step (ink-hi becomes ink-mid, ink-mid becomes ink-low) and keeps its date visible. It is never removed, greyed to illegibility, or collapsed behind a disclosure. A visitor outside a shop needs to tell \"no deal\" apart from \"we have not checked lately\".",
+        "section": "colors"
+      },
+      {
+        "name": "The Five Steps Rule",
+        "body": "22, 18, 14, 12.5, 11. There is no sixth step and no intermediate size. A new element takes the nearest existing step or a different weight, never a new number.",
+        "section": "typography"
+      },
+      {
+        "name": "The Equal Weight Rule",
+        "body": "Every offer renders at the same 18px/600, whatever its type. \"50% off\", \"$4.99\", \"Buy one, get one\" and \"Free\" are not ranked against each other typographically, because the page has no honest way to rank them. Nothing in the type system may imply one deal is worth more than another.",
+        "section": "typography"
+      },
+      {
+        "name": "The Informative Lead Rule",
+        "body": "The largest text on a row must be the text that tells you what you get. Some deal types name themselves without stating an offer: \"loyalty\" is a category, not a deal, and a percent_off whose discount_value came back null degrades to the bare words \"percent off\". Where the offer string only names the kind of deal, the row gives its 18px slot to the deal's own headline instead and the type name drops to an 11px uppercase tag on the location line. The rule is not \"prices are big\", it is \"the informative string is big\". Check it by covering every line on a row except the largest and asking whether you could still decide.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Any run of digits (prices, percentages, dates, counts, minimum spends, gram limits) is set with tabular figures so the offer values and the right-hand dates stay in vertical register while rows change.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Uppercase is reserved for the two 11px roles (band label, off-category tag). Headings, links, buttons and body copy are sentence case. No em dashes anywhere, per PRODUCT.md's voice rule; the metadata list uses a middle dot separator instead.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Column Rule",
+        "body": "One ranked column, top to bottom, always. No card grid, no side-by-side comparison, no filter rail. Ranking is availability first, urgency second, freshness third, and the page never invents a value score.",
+        "section": "layout"
+      },
+      {
+        "name": "The Opaque Band Head Rule",
+        "body": "A sticky head must be fully opaque and must bleed past the content gutters. A translucent or inset head lets rows ghost through it, and the head is the reader's only orientation cue about what state they are looking at.",
+        "section": "layout"
+      },
+      {
+        "name": "The Hairline Rule",
+        "body": "Separation is a 1px ink-line rule and nothing else. If two things need distinguishing, change ink or add space before you reach for a border box, and never reach for a shadow.",
+        "section": "elevation"
+      },
+      {
+        "name": "The No Container Rule",
+        "body": "Deals are list items, not cards. The moment a row gets a background, a border and a radius, it becomes a product tile competing for attention, and the ranked column stops reading as a single ordered answer.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Honest Slot Rules",
+        "body": "1. Unit basis renders as part of the price or not at all. It is never given a stand-in word. A reader who sees \"bundle\" in that slot learns the slot means \"kind of deal\", and would then read a later \"/ 100g\" as a category rather than as the thing that makes the price mean anything. 2. A stale or ended deal is dimmed and dated, never hidden. Ended deals are excluded from the \"on offer\" count but stay on the page with their end date, so a deal never vanishes without saying why. 3. Location is \"All <chain> locations\" or nothing. Store-level data does not exist. No placeholder, no \"Melbourne\", no guess. 4. The coverage claim is exactly \"16 Instagram accounts and 2 websites.\" It is a fact about chains.yaml, not a marketing number, and it changes only when the source list does. 5. Absence is printed. \"no end date given\", \"never checked\", and the empty state's \"Nothing is being hidden\" all say what is missing rather than leaving a gap the reader has to interpret. Unit basis is unexercised by live data: the extractor does produce per_100g (deal #79 is expired, #131 and #132 were rejected as duplicates) but no live approved deal carries one, so the render path has never run where a visitor can see it. The first live per_100g deal must be verified by eye, because this is the only constraint here whose failure is invisible to the person it harms: a per-100g price rendered flat looks normal and reads as a bargain.",
+        "section": "components"
+      },
+      {
+        "name": "The 16px Floor Rule",
+        "section": "components",
+        "body": "Any field a person types into is 18px, never the 14px step. iOS Safari zooms the viewport on focus for any input under 16px, which throws a one-handed user out of position mid-form. This is the one place the type scale is chosen by a platform behaviour rather than by hierarchy."
+      },
+      {
+        "name": "The Example Under The Label Rule",
+        "section": "components",
+        "body": "Examples and constraints go on a hint line under the label, never in a placeholder. A placeholder holding an example is value-shaped text in a value-shaped slot; at 18px on a dark ground it reads as something already entered, and it disappears exactly when the user needs it."
+      },
+      {
+        "name": "The Told Once Rule",
+        "section": "components",
+        "body": "Every claim on /submit is verified against what the code actually does before it ships. EXIF stripping is stated because ingest/submit.py calls sanitize_image; review before appearing is stated because user submissions never auto-approve. No timeframe is promised, no outcome is implied, and no language suggests a reply, because there is no stored identity to reply to."
+      }
+    ],
+    "dos": [
+      "Do hold the palette at one accent on a neutral ground. #43D9A3 for availability and focus; everything else is ink.",
+      "Do assign ink by role: ink-hi subject, ink-mid the deal's own words and real dates, ink-low supporting detail, absent facts and dimmed states.",
+      "Do stay inside the five type steps (22 / 18 / 14 / 12.5 / 11) and reach for weight or ink before a new size.",
+      "Do set every digit with tabular figures.",
+      "Do keep provenance (\"checked <date>\") on every row, right-aligned on the location line, carrying ml-auto so it holds the right edge even when it wraps.",
+      "Do print absence in words: \"no end date given\", \"never checked\", \"Nothing is being hidden\".",
+      "Do dim and date a stale or ended deal instead of removing it, and keep ended deals out of any \"on offer\" count.",
+      "Do separate with 1px ink-line hairlines and space.",
+      "Do make sticky band heads fully opaque and bleed them to the gutters.",
+      "Do use :focus-visible with the 2px live ring at 70%, offset 2px on ink-bg, on every interactive element.",
+      "Do keep motion to colour transitions on interaction, around 150ms."
+    ],
+    "donts": [
+      "Don't use the accent for value, savings, urgency, branding, or a call to action. Availability and focus only.",
+      "Don't add a sixth type step, or set body copy above 12.5px to \"make it more readable\": the size ladder is what makes the scan work.",
+      "Don't rank deal types typographically. Every offer value is 18px/600 regardless of type.",
+      "Don't invent a value score, a \"best deal\" marker, a savings badge, or a discount percentage the source did not state.",
+      "Don't put a stand-in word in the unit-basis slot. Real basis or empty.",
+      "Don't name a store or a suburb. \"All <chain> locations\" or nothing.",
+      "Don't add box-shadows, card backgrounds, borders around rows, gradients, or backdrop blur. The ground is flat.",
+      "Don't add a hero, imagery, an icon set, a badge system, a filter bar, or a deal-card grid. Each of these was refused by name in the direction contract.",
+      "Don't add an entrance animation, a stagger, a skeleton shimmer, or a scroll-triggered reveal. Content that fades in is content that is not yet readable.",
+      "Don't hide anything behind a disclosure, an accordion, or a \"show more\". Everything the page knows is on the page.",
+      "Don't override Tailwind's fontFamily.sans or apply the ink scale globally. The dark ground is scoped to the .froyo subtree on purpose.",
+      "Don't treat /review, /submit or /login as precedent. They are unstyled defaults and out of scope; if one of them is ever designed, it inherits this system rather than the reverse.",
+      "Don't propose a metaphor, a borrowed visual world, or a clever name. Convention is the chosen commitment, recorded in PRODUCT.md, after three re-rolls."
+    ]
+  }
+}

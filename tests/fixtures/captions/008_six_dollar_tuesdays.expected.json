@@ -1,0 +1,20 @@
+[
+  {
+    "headline": "$6 regular cup on Tuesdays",
+    "deal_type": "fixed_price",
+    "discount_value": 6,
+    "discount_unit": "aud",
+    "conditions": "any regular cup, any flavour, all day",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [
+      2
+    ],
+    "valid_from": null,
+    "valid_to": null,
+    "recurring": true,
+    "store_hint": null,
+    "confidence": 0.82
+  }
+]

@@ -1,0 +1,32 @@
+# Froyo Deal Tracker scheduled jobs (LINUX / cron).
+# On macOS use launchd instead - see ops/com.froyo.*.plist and docs/SETUP.md
+# ("Scheduling on macOS"). cron does not fire while the laptop is asleep and does
+# not catch up missed runs; launchd's StartCalendarInterval does fire on wake.
+# This crontab is the Linux (always-on server) path.
+# Install with:  crontab ops/crontab
+# Replace REPO below with the absolute path to this checkout.
+# Each job cd's into the repo so python-dotenv finds .env for DATABASE_URL and
+# GEMINI_API_KEY. Output is appended to logs/ (gitignored).
+
+# Phase 6: daily website scrape, then extract new captures into pending deals.
+15 3 * * * cd REPO && .venv/bin/python -m ingest.scrape && .venv/bin/python -m ingest.extract >> logs/scrape.log 2>&1
+
+# Phase 8: expire past-dated approved deals nightly (after the scrape/extract).
+30 3 * * * cd REPO && .venv/bin/python -m ingest.expire_deals >> logs/jobs.log 2>&1
+
+# Auto-merge duplicate deals nightly (after expire), on approved AND pending so the
+# review queue shows one canonical row per promo. Canonical = approved-over-pending
+# then earliest id; supersedes the rest (status unchanged). Gates on the duplicate
+# scorer, not model confidence; never merges null-value freebies. --commit applies
+# (drop it for a dry-run preview). Every merge is logged to jobs.log.
+35 3 * * * cd REPO && .venv/bin/python -m ingest.merge_dupes --commit >> logs/jobs.log 2>&1
+
+# Phase 8: reverify approved deals weekly (Monday 04:00). Confirms the source
+# still carries the offer and bumps last_verified; does not re-extract.
+0 4 * * 1 cd REPO && .venv/bin/python -m ingest.reverify >> logs/jobs.log 2>&1
+
+# Instagram scrape, 2x daily (morning/evening). The capture source itself is
+# private and not included in this repository, so this line is a no-op here: the
+# runner writes nothing and exits non-zero. Left in place because it is part of
+# the schedule the pipeline is built around.
+30 8,18 * * * cd REPO && .venv/bin/python -m ingest.scrape_instagram >> logs/instagram.log 2>&1

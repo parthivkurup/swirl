@@ -1,0 +1,24 @@
+[
+  {
+    "headline": "Two regular cups and two sauces for $22",
+    "deal_type": "bundle",
+    "discount_value": 22,
+    "discount_unit": "aud",
+    "conditions": "two regular cups plus two sauces; after 8pm",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "valid_from": null,
+    "valid_to": null,
+    "recurring": true,
+    "store_hint": "Glen Waverley",
+    "confidence": 0.77
+  }
+]

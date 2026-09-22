@@ -1,0 +1,18 @@
+[
+  {
+    "headline": "Unspecified percentage off bowls",
+    "deal_type": "percent_off",
+    "discount_value": null,
+    "discount_unit": "percent",
+    "conditions": "discount amount not legible; may apply to small bowls only; confirm in store",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [],
+    "valid_from": null,
+    "valid_to": null,
+    "recurring": false,
+    "store_hint": null,
+    "confidence": 0.35
+  }
+]

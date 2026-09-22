@@ -1,0 +1,331 @@
+# Melbourne frozen yoghurt businesses
+# Compiled 2026-08-04 from live web sources (official sites, centre directories,
+# Instagram/TikTok bios, delivery platform listings).
+# null = could not verify from a source found in this research pass.
+#
+# footprint: does the MONITORED ACCOUNT announce deals for stores outside
+# GREATER MELBOURNE? Not "is the company national" - what matters is whether a
+# caption from this account can be about somewhere we do not serve.
+#   melbourne_only - every venue is in Greater Melbourne, so a caption that
+#                    names no city means Melbourne.
+#   national       - it announces for stores elsewhere, so a caption that names
+#                    no city means genuinely unknown and must not be published
+#                    as a Melbourne deal.
+#   unknown        - not established. Treated exactly like national (the safe
+#                    side), never guessed at.
+# Greater Melbourne, not Victoria: Geelong is VIC and is NOT melbourne_only.
+# Read by ingest.postprocess.derive_scope via the chains table; re-seed after
+# editing (python -m db.seed) and re-derive if you change a value.
+chains:
+  # ---------------------------------------------------------------
+  # Self-serve chains with multiple Melbourne locations
+  # ---------------------------------------------------------------
+  - name: Yo-Chi
+    website: https://yochi.com.au
+    instagram_handle: iloveyochi
+    has_loyalty_app: true
+    melbourne_locations: null
+    posts_promos: both
+    promo_url: https://yochi.com.au/chi-club/
+    footprint: national
+    footprint_basis: >-
+      Wikipedia records a 70th store nationally (Mar 2026) with no per-city
+      breakdown, so this account speaks for stores well outside Melbourne.
+    notes: >-
+      Chi Club T&Cs explicitly require downloading the Yo-Chi app to register a
+      membership, so this is a true app, not just a card. Melbourne count left
+      null: the VIC venues page only returned Balaclava, Carlton, Hawthorn,
+      Malvern, Windsor and Brighton on fetch, but Chadstone (Market Pavilion) is
+      separately confirmed via the centre directory and a new "Fish Market"
+      venue was announced on the brand's Facebook, so the page is clearly
+      incomplete. At least 7 Melbourne venues confirmed. Wikipedia records a
+      70th store nationally in March 2026 with no per-city breakdown.
+
+  - name: Yo-Bar
+    website: https://yobar.com.au
+    instagram_handle: yobaraustralia
+    has_loyalty_app: true
+    melbourne_locations: 8
+    posts_promos: both
+    promo_url: https://yobar.com.au/news
+    footprint: national
+    footprint_basis: >-
+      Opened Canberra Centre (148 Bunda St, ACT) on 8 Aug 2026, announced on
+      this account. The Melbourne-venue list below predates that and is not a
+      claim of Melbourne-only.
+    notes: >-
+      Melbourne venues per the site's own FAQ: Carlton (271 Lygon St),
+      Collingwood, Camberwell, St Kilda, Bentleigh, Chadstone (Food Central),
+      Westfield Fountain Gate, Westfield Knox (O-Zone). Loyalty confirmed only
+      as far as a "JOIN THE CLUB" link to /loyalty-program; that page is a
+      single image so app vs card could not be determined. Site news feed
+      carries dated offers (30% off 3rd birthday, July 2026; Knox opening
+      BOGO, June 2026). Family-owned, states it does not franchise.
+
+  - name: Yo Way
+    website: https://yoway.com.au
+    instagram_handle: yowayaus
+    has_loyalty_app: null
+    melbourne_locations: 16
+    posts_promos: null
+    promo_url: null
+    footprint: national
+    footprint_basis: >-
+      Not melbourne_only even on the evidence below: the Westfield Geelong site
+      is VIC but outside Greater Melbourne. footprint asks about Greater
+      Melbourne, not the state.
+    notes: >-
+      Almost entirely a shopping-centre operator. Greater Melbourne sites: Box
+      Hill Central, CS Square Caroline Springs, Westfield Doncaster, Pacific
+      Epping, Westfield Fountain Gate, Bayside Frankston, Parkmore Keysborough,
+      Highpoint Maribyrnong, Mentone Parade, Westfield Plenty Valley Mill Park,
+      Stockland Point Cook, Northland Preston, DFO South Wharf, The Glen,
+      Westfield Knox, Pacific Werribee. A 17th VIC site at Westfield Geelong is
+      excluded as non-Melbourne. No offers or loyalty page on the site.
+
+  - name: YOMG
+    website: https://www.yomg.com.au
+    instagram_handle: yomgburgers
+    has_loyalty_app: null
+    melbourne_locations: 9
+    posts_promos: both
+    promo_url: https://www.yomg.com.au/offers/
+    footprint: national
+    footprint_basis: >-
+      Announces offers for Coolangatta (Gold Coast, QLD) on this account. The
+      "VIC stores" list below is the VIC subset, not the whole footprint.
+    notes: >-
+      Burger and shake business with a self-serve froyo bar, so it also fits the
+      "froyo counter inside a larger business" category. VIC stores: Glen
+      Waverley, Mornington, Fountain Gate, Mordialloc, Berwick, Pakenham,
+      Rowville, Frankston, Doncaster. Cranbourne listed as coming soon and not
+      counted. Offers page exists but the current offer is a single image, so
+      its content could not be read.
+
+  - name: Yo-Art
+    website: https://yo-art.com.au
+    instagram_handle: yoart_au
+    has_loyalty_app: null
+    melbourne_locations: 3
+    posts_promos: null
+    promo_url: null
+    footprint: melbourne_only
+    footprint_basis: >-
+      All three venues are Melbourne: Melbourne Central (LG20), 272-274 Lonsdale
+      St, and The Glen (G010). Held at unknown briefly while the operator's
+      recollection that the brand is national was checked against this list; the
+      list settled it. The "_au" handle suffix is not evidence of a national
+      footprint, since yokli_au, yolux_au and frobae.au all carry it and are
+      single-city.
+    notes: >-
+      Locations per the current Instagram bio: Melbourne Central (LG20),
+      3/272-274 Lonsdale St, and The Glen (G010). Two Instagram accounts exist,
+      @yoart_au (newer, more posts, lists The Glen) and
+      @yoart.frozen.yoghurt (older). Domain also resolves at yoart.com.au.
+
+  # ---------------------------------------------------------------
+  # Single-location independents
+  # ---------------------------------------------------------------
+  - name: Yokli
+    website: null
+    instagram_handle: yokli_au
+    has_loyalty_app: null
+    melbourne_locations: 2
+    posts_promos: null
+    promo_url: null
+    footprint: melbourne_only
+    footprint_basis: >-
+      Both venues Melbourne (Swan St Richmond, Eaton Mall Oakleigh). Note
+      Richmond also exists in Sydney, so a caption naming it extracts as
+      'unclear'; this footprint is what resolves it to Melbourne.
+    notes: >-
+      106 Swan St Richmond and 11 Eaton Mall Oakleigh. No standalone website
+      found; Instagram is the primary channel. Dairy and vegan bases.
+
+  - name: Yolux
+    website: null
+    instagram_handle: yolux_au
+    has_loyalty_app: null
+    melbourne_locations: 1
+    posts_promos: null
+    promo_url: null
+    footprint: melbourne_only
+    footprint_basis: >-
+      Single venue, Northcote.
+    notes: >-
+      350 High St, Northcote. Apple Maps lists instagram.com/yolux_au as the
+      business website, so there is likely no separate site.
+
+  - name: gojé
+    website: https://www.goje.com.au
+    instagram_handle: gojeyarraville
+    has_loyalty_app: null
+    melbourne_locations: 1
+    posts_promos: null
+    promo_url: null
+    footprint: melbourne_only
+    footprint_basis: >-
+      Single venue, Yarraville.
+    notes: >-
+      38 Anderson St, Yarraville. Open since 2014. Fully plant-based, cashew and
+      coconut bases. Sells gift vouchers via Abacus but no loyalty scheme found.
+
+  - name: Froyolicious
+    website: null
+    instagram_handle: _froyolicious_
+    has_loyalty_app: null
+    melbourne_locations: 1
+    posts_promos: instagram
+    promo_url: null
+    footprint: melbourne_only
+    footprint_basis: >-
+      Single venue, The District Docklands.
+    notes: >-
+      The District Docklands (CW G05). No own domain found; the centre hosts a
+      page at thedistrictdocklands.com.au/froyolicious/. Social feed has run at
+      least one discount post ("show us this post and we will give you 15% off
+      your froyo bowl").
+
+  - name: FRO-BAE Frozen Yoghurt & Acai
+    website: null
+    instagram_handle: frobae.au
+    has_loyalty_app: null
+    melbourne_locations: 1
+    posts_promos: null
+    promo_url: null
+    footprint: melbourne_only
+    footprint_basis: >-
+      Single venue, Caroline Springs.
+    notes: >-
+      25-27 Lake St, Caroline Springs, in the CS Square outdoor dining precinct.
+      Facebook lists "frobae.au" in the website field but that is the Instagram
+      handle; no separate site found. GF, vegan and halal options.
+
+  - name: Just Crave It
+    website: https://justcraveit.com.au
+    instagram_handle: justcraveit_
+    has_loyalty_app: null
+    melbourne_locations: 1
+    posts_promos: website
+    promo_url: https://justcraveit.com.au/about/
+    footprint: melbourne_only
+    footprint_basis: >-
+      Single venue, Carlton.
+    notes: >-
+      200 Elgin St, Carlton. Halal. Unusual model: flat price per cup rather
+      than pay-by-weight. Website advertises a free cake slice with every froyo
+      purchase. Also runs Too Good To Go surprise bags. Site blocks automated
+      fetch, so details come from search snippets only.
+
+  - name: YO MAMA Froyo & Acai
+    website: null
+    instagram_handle: yo.mama.froyo
+    has_loyalty_app: null
+    melbourne_locations: 2
+    posts_promos: null
+    promo_url: null
+    footprint: melbourne_only
+    footprint_basis: >-
+      Both venues Melbourne (Altona, Caroline Springs).
+    notes: >-
+      87 Pier St Altona and 1042 Western Highway Caroline Springs. Heavy TikTok
+      presence under the same handle. Known for house-made toppings and a
+      seasonal warm dessert bar.
+
+  - name: Froyo Culture
+    website: null
+    instagram_handle: froyoculture_
+    has_loyalty_app: null
+    melbourne_locations: 1
+    posts_promos: null
+    promo_url: null
+    footprint: melbourne_only
+    footprint_basis: >-
+      Single venue, Berwick, confirmed across five directories.
+    notes: >-
+      Shop 5/240-246 Clyde Rd, Berwick. Self-serve froyo and acai plus
+      smoothies, American sodas and candy, with in-store games. Instagram bio
+      states 98% fat free, 100% gluten free, 100% halal, open 11am till late.
+      No website: a business directory lists a Facebook page
+      (facebook.com/froyoculture2018) in the website field. Only the Berwick
+      site was found across Uber Eats, DoorDash, AGFG, Tripadvisor and Cylex.
+
+  - name: YO-TO Frozen Bar
+    website: null
+    instagram_handle: yotofrozenbar
+    has_loyalty_app: null
+    melbourne_locations: 1
+    posts_promos: null
+    promo_url: null
+    footprint: melbourne_only
+    footprint_basis: >-
+      Single venue, Clyde North. The thin evidence below is about shop vs mobile
+      operation and the exact address, not the city: every signal found is
+      Melbourne.
+    notes: >-
+      Clyde North. Existence confirmed but detail is thin: the business does not
+      appear on Uber Eats, DoorDash, Yelp, Tripadvisor or any centre directory
+      found, and Instagram blocks automated access so the bio could not be read.
+      Evidence is the handle supplied directly, an Instagram post titled "Clyde
+      North YO-TO Frozen Bar", a matching TikTok account (@yotofrozenbar, styled
+      "YO-TO Frozen Bar") whose posts reach 30k+ views, and the TikTok Clyde
+      North place page carrying #yotofrozenbar with #clydenorthvictoria. Exact
+      street address unverified. Social content references cookie dough and
+      acai, so the range may extend past froyo. One TikTok tag cluster puts it
+      near #foodtruck content, so whether this is a fixed shop or a mobile
+      operation is not established.
+
+  - name: blu spoon
+    website: https://www.bluspoongreekyogurt.com.au
+    instagram_handle: bluspoon
+    has_loyalty_app: null
+    melbourne_locations: 1
+    posts_promos: null
+    promo_url: null
+    footprint: melbourne_only
+    footprint_basis: >-
+      Single venue, Port Melbourne.
+    notes: >-
+      175 Bay St, Port Melbourne. Greek yoghurt bar doing both fresh and frozen
+      Greek yoghurt plus ice cream. Contact page indicated takeaway only at time
+      of writing.
+
+  - name: Big Bang Yogurt
+    website: https://big-bang-yogurt.square.site
+    instagram_handle: bigbangyogurt
+    has_loyalty_app: true
+    melbourne_locations: 1
+    posts_promos: null
+    promo_url: null
+    footprint: melbourne_only
+    footprint_basis: >-
+      Single venue, Melbourne CBD.
+    notes: >-
+      607 Elizabeth St, Melbourne CBD. Fried yoghurt slices and cubes rather
+      than soft-serve froyo. Business description states a rewards program
+      earning points on every purchase; likely Square Loyalty given the Square
+      storefront, but the mechanism was not confirmed. Also stocks Her Little
+      Patisserie cakes.
+
+  # ---------------------------------------------------------------
+  # Froyo counter inside a larger dessert business
+  # ---------------------------------------------------------------
+  - name: Vanilla Dessert Bar
+    website: null
+    instagram_handle: null
+    has_loyalty_app: null
+    melbourne_locations: null
+    posts_promos: null
+    promo_url: null
+    footprint: melbourne_only
+    footprint_basis: >-
+      Both addresses found are Oakleigh. Inert in practice: instagram_handle is
+      null, so nothing is monitored for this chain.
+    notes: >-
+      Self-serve froyo, ice cream and acai counter with 60+ toppings, run by
+      Vanilla Lounge, a long-standing Oakleigh Greek patisserie. Two addresses
+      appear across sources (20 Chester St and 17-21 Eaton Mall) and it is
+      unclear whether these are two sites or a relocation, so the count is left
+      null. Instagram handle left null: TikTok captions reference both
+      @vanillaoakleigh and @VanillaDessertBar and neither was confirmed
+      directly.

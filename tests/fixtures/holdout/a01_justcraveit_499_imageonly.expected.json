@@ -1,0 +1,20 @@
+[
+  {
+    "headline": "$4.99 unlimited froyo and toppings",
+    "deal_type": "fixed_price",
+    "discount_value": 4.99,
+    "discount_unit": "aud",
+    "unit_basis": "flat",
+    "category": "froyo",
+    "conditions": "unlimited frozen yogurt and toppings for one flat price",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [],
+    "valid_from": null,
+    "valid_to": null,
+    "recurring": false,
+    "store_hint": null,
+    "confidence": 0.9
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "headline": "$10 flat rate cups on Frozen Yoghurt Day",
+    "deal_type": "fixed_price",
+    "discount_value": 10,
+    "discount_unit": "aud",
+    "conditions": "flat rate cup, not sold by weight",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [],
+    "valid_from": "2026-02-06",
+    "valid_to": "2026-02-06",
+    "recurring": false,
+    "store_hint": "Dromana",
+    "confidence": 0.8
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "headline": "$4 per 100g on self serve froyo",
+    "deal_type": "fixed_price",
+    "discount_value": 4,
+    "discount_unit": "aud",
+    "unit_basis": "per_100g",
+    "conditions": null,
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [
+      "dine_in",
+      "takeaway"
+    ],
+    "days_of_week": [],
+    "valid_from": null,
+    "valid_to": null,
+    "recurring": false,
+    "store_hint": null,
+    "confidence": 0.9
+  }
+]

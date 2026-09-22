@@ -1,0 +1,18 @@
+[
+  {
+    "headline": "Free cake slice with every froyo purchase",
+    "deal_type": "freebie",
+    "discount_value": null,
+    "discount_unit": null,
+    "conditions": "one cake slice valued at $5.99 with any froyo purchase",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [],
+    "valid_from": null,
+    "valid_to": null,
+    "recurring": false,
+    "store_hint": "Elgin St Carlton",
+    "confidence": 0.78
+  }
+]

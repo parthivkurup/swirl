@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scoped to the public dashboard at /. The root layout sets a light body for
+   /review and /submit, so the dark ground is pulled up to the body only while a
+   .froyo subtree is on the page.
+
+   There is deliberately no entrance animation here: the page's whole thesis is
+   that it is legible in a glance, and content that fades in is content that is
+   not yet readable. Motion on this surface is interaction feedback only. */
+
+body:has(.froyo) {
+  background-color: #0a0a0b;
+}

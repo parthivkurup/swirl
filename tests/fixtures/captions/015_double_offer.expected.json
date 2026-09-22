@@ -1,0 +1,34 @@
+[
+  {
+    "headline": "20% off all bowls until 3pm",
+    "deal_type": "percent_off",
+    "discount_value": 20,
+    "discount_unit": "percent",
+    "conditions": "until 3pm",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [],
+    "valid_from": "2026-04-25",
+    "valid_to": "2026-04-25",
+    "recurring": false,
+    "store_hint": null,
+    "confidence": 0.78
+  },
+  {
+    "headline": "Kids bowl and juice combo for $9",
+    "deal_type": "bundle",
+    "discount_value": 9,
+    "discount_unit": "aud",
+    "conditions": "kids bowl plus a juice; runs through the school holidays",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [],
+    "valid_from": null,
+    "valid_to": null,
+    "recurring": false,
+    "store_hint": null,
+    "confidence": 0.65
+  }
+]

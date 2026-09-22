@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: froyo
+      # Local dev default. Override by setting POSTGRES_PASSWORD in .env, and keep
+      # DATABASE_URL in step with it.
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-froyo}
+      POSTGRES_DB: froyo
+    ports:
+      - "5432:5432"
+    volumes:
+      - froyo_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U froyo -d froyo"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  froyo_pgdata:

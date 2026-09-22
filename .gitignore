@@ -1,0 +1,28 @@
+# Secrets. .env.example is the tracked template and is re-admitted below.
+.env*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Runtime data, never committed: scraped media, capture state, logs, and the
+# extractor's per-caption response cache.
+data/
+media/
+logs/
+.cache/
+
+# Web app build output and local dependencies (web/.gitignore repeats these so
+# they are ignored whichever directory git is invoked from).
+web/.next/
+web/node_modules/
+web/next-env.d.ts
+*.tsbuildinfo
+
+# Local tool state
+.DS_Store
+.impeccable/questions/

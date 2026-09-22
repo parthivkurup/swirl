@@ -1,0 +1,18 @@
+[
+  {
+    "headline": "$2 off bowls up to 200g",
+    "deal_type": "dollar_off",
+    "discount_value": 2,
+    "discount_unit": "aud",
+    "conditions": "bowl must be 200g or under; request at counter",
+    "min_spend_aud": null,
+    "max_grams": 200,
+    "channels": [],
+    "days_of_week": [],
+    "valid_from": null,
+    "valid_to": null,
+    "recurring": false,
+    "store_hint": null,
+    "confidence": 0.79
+  }
+]

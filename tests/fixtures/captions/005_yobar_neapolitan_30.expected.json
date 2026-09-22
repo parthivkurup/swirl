@@ -1,0 +1,18 @@
+[
+  {
+    "headline": "30% off when wearing stripes",
+    "deal_type": "percent_off",
+    "discount_value": 30,
+    "discount_unit": "percent",
+    "conditions": "wear stripes; T&Cs apply",
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [],
+    "valid_from": "2026-07-13",
+    "valid_to": "2026-07-15",
+    "recurring": false,
+    "store_hint": null,
+    "confidence": 0.8
+  }
+]

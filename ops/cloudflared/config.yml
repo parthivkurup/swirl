@@ -1,0 +1,50 @@
+# Cloudflare Tunnel ingress for froyo.
+#
+# The tunnel publishes ONLY the public surfaces. /review, /login, /api/deals and
+# /api/image are deliberately absent: they stay reachable at localhost:3000 and
+# nowhere else. This is an allowlist, and the final catch-all serves 404 to
+# anything not named above it, so a route added later is private by default
+# rather than public by accident.
+#
+# Rules are evaluated top to bottom and the first match wins. `path` is a Go
+# regular expression matched against the URL path only (never the query string),
+# so every rule below is anchored on purpose: an unanchored `/submit` would also
+# match /submitanything.
+#
+# Replace TUNNEL_NAME, FROYO_HOSTNAME and the credentials-file path before use.
+# See docs/SETUP.md, Deployment.
+
+tunnel: TUNNEL_NAME
+credentials-file: /ABSOLUTE/PATH/TO/HOME/.cloudflared/TUNNEL_UUID.json
+
+# Never advertise the origin as anything but loopback.
+originRequest:
+  connectTimeout: 10s
+  noTLSVerify: false
+
+ingress:
+  # The public dashboard. Anchored to the root exactly; ?category=all is a query
+  # string, which path matching ignores, so this covers both toggle states.
+  - hostname: FROYO_HOSTNAME
+    path: ^/$
+    service: http://localhost:3000
+
+  # The submission form.
+  - hostname: FROYO_HOSTNAME
+    path: ^/submit/?$
+    service: http://localhost:3000
+
+  # The only API route the form posts to.
+  - hostname: FROYO_HOSTNAME
+    path: ^/api/submit/?$
+    service: http://localhost:3000
+
+  # Build assets for the two pages above (JS chunks, CSS, the self-hosted font).
+  # Verified against a real page load: these four groups are the entire set of
+  # requests the public surfaces make.
+  - hostname: FROYO_HOSTNAME
+    path: ^/_next/
+    service: http://localhost:3000
+
+  # Everything else is not on the internet.
+  - service: http_status:404

@@ -1,0 +1,20 @@
+[
+  {
+    "headline": "20% off self serve froyo on Mondays",
+    "deal_type": "percent_off",
+    "discount_value": 20,
+    "discount_unit": "percent",
+    "conditions": null,
+    "min_spend_aud": null,
+    "max_grams": null,
+    "channels": [],
+    "days_of_week": [
+      1
+    ],
+    "valid_from": "2026-02-02",
+    "valid_to": "2026-03-23",
+    "recurring": true,
+    "store_hint": null,
+    "confidence": 0.85
+  }
+]
